@@ -1,1 +1,8 @@
-
+{
+  "name": "naf-ai-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "openai": "^5.12.2"
+  }
+}
