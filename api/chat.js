@@ -25,8 +25,11 @@ export default async function handler(req, res) {
         });
     }
 
+    const keyExists = Boolean(process.env.OPENAI_API_KEY);
+
     return res.status(200).json({
-        success: true,
-        keyAvailable: Boolean(process.env.OPENAI_API_KEY)
+        reply: keyExists
+            ? "KEY FOUND"
+            : "KEY NOT FOUND"
     });
 }
